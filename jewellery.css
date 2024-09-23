@@ -1,4 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
@@ -152,10 +159,6 @@ header h1 {
     cursor: pointer;
 }
 
-.like-icon:hover {
-    color: red; /* Change color on hover */
-}
-
 .product-details {
     margin: 15px 15px 10px 15px;
 }
@@ -188,18 +191,94 @@ header h1 {
     color: red;
     margin-left: 10px; /* Space between price and status */
 }
-
-
-
-
-
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.category-grid-banner-slot {
+    grid-column: span 2; /* Make the banner span two columns */
 }
+
+.category-grid-banner-slot .category-grid-banner img {
+    max-height: 28.5rem;
+    height: 500px;
+    border-radius: 4px;
+    width: 100%; /* Ensure image takes full width of the banner */
+    object-fit:fill; /* Maintain aspect ratio but cover the entire area */
+}
+
+.img-banner {
+    vertical-align: middle;
+    border: none;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+.search-box {
+    background-color: white;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    width: 350px;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .search-icon {
+    width: 50px;
+    margin-bottom: 15px;
+  }
+  
+  .search-box h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .search-box p {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  
+  .search-box input {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  .search-box .search-btn {
+    background-color: #b5655b;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;  /* Rounded button */
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .search-box .search-btn:hover {
+    background-color: #a0524d;
+  }
+
+  .load-more-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.load-more-btn {
+    background-color: #8b1e1b;
+    color: white;
+    padding: 10px 40px;
+    border-radius: 50px;  /* Fully rounded button */
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.load-more-btn:hover {
+    background-color: #6a1413; /* Darker red on hover */
+}
+
+
+
 
 .main{
     background-color: #efe3e3;
