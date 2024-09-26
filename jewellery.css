@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
-
 
 *{
     margin: 0;
@@ -73,13 +71,37 @@ header h1 {
 
 .sort {
     margin-left: auto;
+    border: 1px solid #ddd;
+    width: fit-content;
+    border-radius: 30px;
 }
 
-.sort select {
-    padding: 5px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
+.sort-container {
+    display: inline-block; 
+    position: relative;
 }
+
+.sort-button {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-family: sans-serif;
+    cursor: pointer; 
+    display: flex;
+    align-items: center;
+}
+
+.sort-button p {
+    margin: 0 8px 0 0; 
+    font-size: 16px;
+}
+
+.sort-button img {
+    width: 20px; 
+    height: auto;
+}
+
 
 /* Product List Styles */
 .product-list {
@@ -106,12 +128,16 @@ header h1 {
 
 .badge {
     position: absolute;
-    background-color: #ba454f;
+    background: linear-gradient(90deg, rgba(131, 39, 41, 0.9) 0%, rgba(245, 206, 155, 0.9) 135%) !important;
     color: white;
     font-size: 12px;
     padding: 5px 10px;
     border-radius: 4px;
     z-index: 1; /* Ensure badge is above other elements */
+
+    & > .star {
+        padding-right: 5px;
+    }
 }
 
 .image-wrapper {
@@ -133,11 +159,23 @@ header h1 {
     opacity: 0; /* Initially hidden */
 }
 
+.image-container:hover {
+    box-shadow: 4px 4px 4px 4px rgb(230, 228, 228);
+    border: #d1d0cd solid;
+    border-radius: 4px;
+    border-width: 2px;
+   
+}
+
+
 .image-container:hover .hover-image {
     /* Show hover image on hover */
     right: 0; /* Move into view */
     opacity: 1; /* Show image */
-    transition: right 0.3s ease, opacity 0.3s ease; /* Smooth transition */
+    transition: right 0.3s ease, opacity 0.3s ease; /* Smooth transition */  
+    border: #56544e;
+    border-radius: 7px;
+
 }
 
 .image-container:hover .default-image {
@@ -158,12 +196,80 @@ header h1 {
     color: #aaa; /* Initial color */
     cursor: pointer;
 }
+.like-icon:hover .wishlist-btn {
+    opacity: 1; /* Fade in */
+    pointer-events: auto; /* Enable interaction */
+}
+.wishlist-btn {
+    width: 115px;
+    position: absolute; /* Position relative to the like icon */
+    top: 30px; /* Adjust this to position the button below the heart icon */
+    right: 0px; /* Align with the heart icon */
+    background-color: #b5655b; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove border */
+    padding: 5px 10px; /* Padding around the button */
+    border-radius: 5px; /* Rounded corners */
+    transition: opacity 0.3s ease; /* Transition for fade effect */
+    opacity: 0; /* Initially hidden */
+    pointer-events: none;
+    /* Prevent interaction when hidden */
+}
+/* Wishlist Button hover effect */
+.wishlist-btn:hover {
+    background-color: #a0524d; /* Darker shade on hover */
+}
+
+.hover-buttons {
+    position: absolute; /* Position it relative to the image */
+    bottom: 10px; /* Position buttons 10px from the bottom */
+    right: 10px; /* Position buttons 10px from the right */
+    display: flex; /* Use flexbox to align the buttons */
+    gap: 0; /* Remove space between buttons, as we'll add partitions */
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.3s ease; /* Smooth transition for showing the buttons */
+    border: 1px solid gray; /* Shared border */
+    background-color: white; /* White background for the buttons container */
+    border-radius: 5px 0 0 0; /* Rounded corners for the border */
+    padding: 5px; /* Padding around the buttons */
+}
+
+.image-container:hover .hover-buttons {
+    opacity: 1; /* Show the buttons on hover over the image */
+}
+
+.similar-btn, .try-btn {
+    padding: 5px 10px; /* Decreased padding for smaller buttons */
+    background-color: transparent; /* Transparent background for buttons */
+    color: black; /* Black text color */
+    border: none; /* Remove button border */
+    cursor: pointer; /* Change cursor on hover */
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    border-right: 1px solid gray; /* Add right border to create a partition */
+}
+
+.try-btn {
+    border-right: none; /* Remove the right border from the last button */
+}
+
+.similar-btn:hover, .try-btn:hover {
+    background-color: #a0524d; /* Change background on hover */
+    color: white; /* Change text color on hover */
+}
+
+.try-btn img, .similar-btn img {
+    margin-right: 5px; /* Space between the icon and text */
+    width: 16px; /* Adjust icon size to fit smaller buttons */
+    height: auto; /* Maintain aspect ratio */
+}
 
 .product-details {
     margin: 15px 15px 10px 15px;
 }
 
 .product-name {
+    text-align: start;
     font-size: 16px;
     color: #333;
     font-weight: 500;
@@ -214,237 +320,278 @@ header h1 {
     background-color: white;
     border-radius: 8px;
     border: 1px solid #ddd;
-    width: 350px;
-    padding: 20px;
+    width: 100%;
+    padding: 25px; /* Added more padding */
     text-align: center;
-  }
-  
-  .search-icon {
-    width: 50px;
+    color: #5b3a29; /* Text color brown */
+}
+
+.search-icon {
+    width: 80px; /* Increased the size of the image */
+    margin-bottom: 20px; /* Added more space below the image */
+}
+
+.search-box h2 {
+    font-size: 22px; /* Increased font size */
     margin-bottom: 15px;
-  }
-  
-  .search-box h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-  
-  .search-box p {
-    font-size: 14px;
-    margin-bottom: 20px;
-  }
-  
-  .search-box input {
+    color: #5b3a29; /* Text color brown */
+}
+
+.search-box p {
+    font-size: 16px; /* Increased font size for better readability */
+    margin-bottom: 25px; /* Increased space between paragraph and inputs */
+    color: #5b3a29;
+}
+
+/* Round input boxes with proper gap */
+.search-box input {
     width: 80%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 4px;
+    padding: 12px;
+    margin-bottom: 20px;  /* Increased gap between inputs */
+    border-radius: 50px;
     border: 1px solid #ccc;
-  }
-  
-  .search-box .search-btn {
+    text-align: center;
+}
+
+/* Button style with arrow */
+.search-box .search-btn {
     background-color: #b5655b;
     color: white;
-    padding: 10px 20px;
-    border-radius: 50px;  /* Rounded button */
+    padding: 12px 35px;
+    border-radius: 50px;
     border: none;
     cursor: pointer;
     font-size: 16px;
-  }
-  
-  .search-box .search-btn:hover {
-    background-color: #a0524d;
-  }
+    position: relative;
+}
+
+.search-box .search-btn .arrow {
+    margin-left: 10px;
+    background-color: darkbrown;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+.search-box .search-btn:hover {
+    background-color: #a87677;
+}
 
   .load-more-button {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    width: auto; /* Auto width to fit button */
+    padding: 20px 0; /* Optional: Add some vertical padding */
 }
 
 .load-more-btn {
-    background-color: #8b1e1b;
-    color: white;
-    padding: 10px 40px;
-    border-radius: 50px;  /* Fully rounded button */
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    font: 400 20px fraunces, serif; /* Font style */
+    color: #fff; /* Text color */
+    width: 153px; /* Set the button width */
+    height: 58px; /* Set the button height */
+    border: none; /* Remove border */
+    border-radius: 40px; /* Rounded corners */
+    background: linear-gradient(90.18deg, #832729 .17%, #631517 99.86%); /* Button gradient */
+    cursor: pointer; /* Change cursor to pointer on hover */
 }
 
 .load-more-btn:hover {
-    background-color: #6a1413; /* Darker red on hover */
+    background-color: #6b1a1b; /* Darker red on hover */
+    transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+@media (max-width: 1023.98px) {
+    .load-more-btn {
+        width: 118px; /* Smaller width for mobile */
+        height: 38px; /* Smaller height for mobile */
+        font: 400 14px fraunces, serif; /* Smaller font size for mobile */
+    }
 }
 
 
+/* Main container for assurance */
+.assurance {
+    position: relative; /* Establish positioning context */
+    margin: 40px auto; /* Center the box */
+    width: 90%; /* Increased width */
+    max-width: 1200px; /* Set a maximum width for larger screens */
+}
 
+/* Background PNG styling */
+.assurance-background {
+    width: 100%; /* Ensure the image covers the full width */
+    border-radius: 50px; /* Match the rounded corners */
+    display: block; /* Ensures no extra space below the image */
+}
 
-.main{
-    background-color: #efe3e3;
-    user-select: none;
-    height: 100%;
-    width: 100%;
+/* Content overlay */
+.assurance-text {
+    position: absolute; /* Position absolutely within the container */
+    top: 20%; /* Adjust vertical position */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust position to be exactly centered */
+    text-align: center; /* Center text */
+    color: #300708; /* Set text color */
+    z-index: 1; /* Ensure text is above the background */
+}
+
+/* Header for the assurance box */
+.ass-head {
+    font-family: 'Fraunces', serif;
+    font-size: 48px; /* Increased font size */
+    margin: 5px 0; /* Adjusted margin for better spacing */
+    font-weight: bold;
+}
+
+/* Description text */
+.ass-desc {
+    font-family: 'Fraunces', serif;
+    font-size: 24px; /* Increased font size */
+    color: #56544e;
+    margin: 20px 0; /* Adjusted margin for better spacing */
+    font-weight: 300;
+}
+
+/* Flex container for the assurance elements */
+.assurance-element {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    padding: 70px;
-    grid-template-areas: 
-    "lists lists lists download-link"
-    "divider divider divider divider"
-    "links links links links";
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    gap: 20px; /* Adjusted gap for space between items */
+    position: absolute; /* Fix position of the items */
+    bottom: 20px; /* Adjust from bottom */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust position to be centered */
+    z-index: 1; /* Ensure items are above background */
 }
 
-.main h3{
-    font-size: 20px;
-    font-weight: 700;
-    color: #832627;
-    position: relative;
-    z-index: 1;
+/* Individual assurance items */
+.assurance-item {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9); /* Light background for each item with some transparency */
+    border-radius: 20px; /* Rounded corners for items */
+    padding: 20px; /* Padding around each item for spacing */
 }
 
-.main ul{
-    grid-area: lists;
-    list-style: none;
-    line-height: 3.6;
+/* Assurance item images */
+.assurance-item img {
+    width: 100px; /* Fixed image size */
+    height: auto; /* Maintain aspect ratio */
 }
 
-.main ul li a{
-    font-size: 18px;
-    font-weight: 400;
-    text-decoration: none;
-    color: black;
-    position: relative;
-    transition: all 0.3s ease;
+/* Assurance item text with wrapping */
+.assurance-item p {
+    font-family: 'Fraunces', serif;
+    font-size: 18px; /* Increased font size */
+    margin-top: 10px;
+    line-height: 1.4;
 }
 
-.main ul li a:hover{
-    cursor: pointer;
-    font-weight: 700;
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .assurance-element {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    }
+
+    .ass-head {
+        font-size: 36px; /* Smaller header on medium screens */
+    }
+
+    .ass-desc {
+        font-size: 20px; /* Smaller description on medium screens */
+    }
+
+    .assurance-item img {
+        width: 80px; /* Slightly smaller images */
+    }
+
+    .assurance-item p {
+        font-size: 16px; /* Smaller text for items */
+    }
 }
 
-.main ul li a::before{
-    content: "";
-    position: absolute;
-    left: 0;
+@media (max-width: 768px) {
+    .assurance-element {
+        grid-template-columns: 1fr; /* 1 column on mobile */
+    }
+
+    .ass-head {
+        font-size: 28px; /* Smaller header on mobile */
+    }
+
+    .ass-desc {
+        font-size: 18px; /* Smaller description on mobile */
+    }
+
+    .assurance-item img {
+        width: 60px; /* Smaller images for mobile */
+    }
+
+    .assurance-item p {
+        font-size: 14px; /* Smaller text for items on mobile */
+    }
+}
+
+/* recently viwed */
+#recently-viewed-container {
+    position: fixed; 
     bottom: 0;
-    height: 1.5px;
-    width: 0px;
-    background-color: black;
-    transition: all 0.3s ease;
-}
-
-.main ul li a:hover::before{
-    width: 100%;
-}
-
-.download{
-    grid-area: download-link;
-}
-
-.main .download h4{
+    left: 0;
+    margin-bottom: 60px;
+    margin-left: 70px;
+    display: flex;
+    z-index: 2;
+  }
+  
+  /* Style the button */
+  #recently-viewed-button {
+    background-color: #550d0d;
+    color: #ffffff;
     font-size: 20px;
-    font-weight: 700;
-    /* text-align: center; */
-}
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    & >  .eye {
+       margin-top: 5px;
+        height: 10px;
+        margin-left: 10px;
+      }
+  }
+  
+  /* Add hover effect to the button */
+  #recently-viewed-button:hover {
+    background-color: hsl(0, 39%, 40%);
+  }
 
-.main .download .image{
-    width: 100%;
+  /* live button*/
+  .live-on {
+     display: block;
+  }
+  .live-box {
+    position: fixed;
+    visibility: visible;
+    cursor: pointer;
+    background-color: transparent;
+    padding: 0px;
+    margin: 0px;
+    top:70%;
+    right: 0px;
+    width: 32px;
+    transition: all 0.5s ease 0 ;
+    z-index: 999999;
+  }
+
+  .live-box-in {
+    background-color: #832729;
+    color: white;
+    padding: 7px;
+    position: relative;
+    font-size: 15px;
     display: flex;
-    justify-content: center;
-    margin: 20px 0px;
-}
-
-.image img{
-    height: 200px;
-    width: 200px;
-}
-
-.download-links{
-    display: flex;
-    justify-content: center;
-    height: 70px;
-}
-
-.download-links img{
-    height: 40px;
-    width: 134px;
-    transition: all 0.4s ease;
-    border-radius: 9px;
-}
-
-.download-links img:hover{
-    filter: brightness(80%);
-    box-shadow: 0px 0px 200px 2px #832627;
-}
-
-.follow-us{
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.follow-us a img{
-    height: 25px;
-    width: 25px;
-    transition: scale 0.3s ease;
-}
-
-.follow-us a img:hover{
-    scale: 1.5;
-}
-
-.contact-us img{
-    height: 25px;
-    width: 35px;
-    transition: all 0.3s ease;
-}
-
-.contact-us img:hover{
-    transform: scale(1.1);
-}
-
-.divider{
-    background-color: #efe3e3;
-    margin: 0 auto;
-    width: 90%;
-    /* height: 10px; */
-    border-top: 2px solid black;
-}
-
-.lower-footer{
-    background-color: #efe3e3;
-    height: 150px;
-    user-select: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-}
-
-.lower-footer .investors img{
-    height: 25px;
-}
-
-.tnc{
-    width: 400px;
-    font-size: 14px;
-    color: #832627;
-    line-height: 30px;
-}
-
-.terms a{
-    font-size: 14px;
-    color: #832627;
-    text-decoration: none;
-    padding: 0 12px;
-    transition: all 0.3s ease;
-}
-
-.terms .pp{
-    border-left: 1px solid #832627;
-    border-right: 1px solid #832627;
-}
-
-.terms a:hover{
-    font-weight: 700;
-}
+    flex-direction: row;
+    writing-mode: vertical-rl;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    visibility: visible;
+    cursor: pointer;
+  }

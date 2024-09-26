@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All Jewellery</title>
     <link rel="stylesheet" href="jewellery.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
@@ -14,17 +15,19 @@
             </nav>
             <h1>All Jewellery (23426 results)</h1>
             <div class="filters">
-                <button class="filter-btn">Filter <span>▼</span></button>
-                <button class="category-btn"><img src="./assets/add_circle.svg" alt="add_circle">Bangle</button>
+                <button class="filter-btn"><img src="./assets/filter icon.svg" alt="filter-svg">Filter <img src="./assets/down_arrow.svg" alt="down-arrow"></button>
+                <button class="category-btn">+Bangle</button>
                 <button class="category-btn">+ Earrings</button>
                 <button class="category-btn">+ Necklace</button>
                 <button class="category-btn">+ Pendant</button>
                 <button class="category-btn">+ Mangalsutra</button>
                 <div class="sort">
-                    <label for="sort-options">Sort By:</label>
-                    <select id="sort-options">
-                        <option>Best Matches</option>
-                    </select>
+                    <div class="sort-container">
+                        <div class="sort-button">
+                            <p>Sort By: <b>Best Matches</b></p>
+                            <img src="./assets/down_arrow.svg" alt="Down arrow" class="down"> 
+                        </div>
+                    </div>
                 </div>
             </div>
         </header>
@@ -32,17 +35,21 @@
         <div class="product-list">
             <div class="product">
                 <div class="image-container">
-                    <div class="badge">EXPERT'S CHOICE</div>
+                    <div class="badge"><span class="star"><img src="./assets/ribbon-star.svg"></span> EXPERT'S CHOICE</div>
                     <div class="image-wrapper">
                         <img src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dw0fbc9267/images/hi-res/50D3PTSCMABA09_1.jpg?sw=640&sh=640" 
                              alt="Earrings" class="default-image">
                         <img src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dw6d127906/images/hi-res/50D3PTSCMABA09_2.jpg?sw=640&sh=640"
                              alt="Earrings Hover" class="hover-image">
+                             <div class="hover-buttons">
+                                <button class="similar-btn">
+                                    <span><img src="./assets/similar icon.svg" alt="Similar Icon"></span>Similar</button>
+                                <button class="try-btn">
+                                    <span><img src="./assets/try it icon.svg" alt="Try It Icon"></span> Try It
+                                </button>
+                            </div>
+                        
                     </div>
-                    <!-- <div class="hover-buttons">
-                        <button class="similar-btn">Similar</button>
-                        <button class="try-btn">Try It</button>
-                    </div> -->
                 </div>
                 <div class="product-details">
                     <div class="product-name">Starry Dual Tone Diamond Stud Earrings</div>
@@ -51,17 +58,25 @@
                         <!-- <div class="product-status">Only 1 left!</div> -->
                     </div>
                 </div>
-                <span class="like-icon"><img src="https://www.tanishq.co.in/on/demandware.static/Sites-Tanishq-Site/-/en_IN/v1727079435264/images/plp/heart-red-border.svg"></span>
+                <span class="like-icon"><img src="https://www.tanishq.co.in/on/demandware.static/Sites-Tanishq-Site/-/en_IN/v1727079435264/images/plp/heart-red-border.svg" alt="Like Icon" class="heart-icon">
+                    <button class="wishlist-btn">Add to Wishlist</button></span>    
             </div>
         
             <div class="product">
                 <div class="image-container">
-                    <div class="badge">EXPERT'S CHOICE</div>
+                    <div class="badge"><span class="star"><img src="./assets/ribbon-star.svg"></span> EXPERT'S CHOICE</div>
                     <div class="image-wrapper">
                         <img src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dw78d79723/images/hi-res/50D3I2HEWAAA02_1.jpg?sw=640&sh=640" 
                              alt="Earrings" class="default-image">
                         <img src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dw0e25228f/images/hi-res/50D3I2HEWAAA02_2.jpg?sw=640&sh=640"
                              alt="Earrings Hover" class="hover-image">
+                             <div class="hover-buttons">
+                                <button class="similar-btn">
+                                    <span><img src="./assets/similar icon.svg" alt="Similar Icon"></span>Similar</button>
+                                <button class="try-btn">
+                                    <span><img src="./assets/try it icon.svg" alt="Try It Icon"></span> Try It
+                                </button>
+                            </div>
                     </div>
                 </div>
                 <div class="product-details">
@@ -71,7 +86,8 @@
                         <div class="product-status">Only 1 left!</div>
                     </div>
                 </div>
-                <span class="like-icon"><img src="https://www.tanishq.co.in/on/demandware.static/Sites-Tanishq-Site/-/en_IN/v1727079435264/images/plp/heart-red-border.svg"></span>
+                <span class="like-icon"><img src="https://www.tanishq.co.in/on/demandware.static/Sites-Tanishq-Site/-/en_IN/v1727079435264/images/plp/heart-red-border.svg" alt="Like Icon" class="heart-icon">
+                    <button class="wishlist-btn">Add to Wishlist</button></span>
             </div>
 
             <div class="product">
@@ -82,6 +98,13 @@
                              alt="Earrings" class="default-image">
                         <img src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dw36a3e793/images/hi-res/51D3D1DMNABA00_2.jpg?sw=640&sh=640"
                              alt="Earrings Hover" class="hover-image">
+                             <div class="hover-buttons">
+                                <button class="similar-btn">
+                                    <span><img src="./assets/similar icon.svg" alt="Similar Icon"></span>Similar</button>
+                                <button class="try-btn">
+                                    <span><img src="./assets/try it icon.svg" alt="Try It Icon"></span> Try It
+                                </button>
+                            </div>
                     </div>
                 </div>
                 <div class="product-details">
@@ -91,24 +114,28 @@
                         <div class="product-status">Only 1 left!</div>
                     </div>
                 </div>
-                <span class="like-icon"><img src="https://www.tanishq.co.in/on/demandware.static/Sites-Tanishq-Site/-/en_IN/v1727079435264/images/plp/heart-red-border.svg"></span>
+                <span class="like-icon"><img src="https://www.tanishq.co.in/on/demandware.static/Sites-Tanishq-Site/-/en_IN/v1727079435264/images/plp/heart-red-border.svg" alt="Like Icon" class="heart-icon">
+                    <button class="wishlist-btn">Add to Wishlist</button></span>
             </div>
         </div>
 
         <div class="product-list">
             <div class="product">
                 <div class="image-container">
-                    <div class="badge">EXPERT'S CHOICE</div>
+                    <div class="badge"><span class="star"><img src="./assets/ribbon-star.svg"></span> EXPERT'S CHOICE</div>
                     <div class="image-wrapper">
                         <img src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dw5376a066/images/hi-res/51D3C2DIRABA00_1.jpg?sw=640&sh=640" 
                              alt="Earrings" class="default-image">
                         <img src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dw385d0da5/images/hi-res/51D3C2DIRABA00_2.jpg?sw=640&sh=640"
                              alt="Earrings Hover" class="hover-image">
+                             <div class="hover-buttons">
+                                <button class="similar-btn">
+                                    <span><img src="./assets/similar icon.svg" alt="Similar Icon"></span>Similar</button>
+                                <button class="try-btn">
+                                    <span><img src="./assets/try it icon.svg" alt="Try It Icon"></span> Try It
+                                </button>
+                            </div>
                     </div>
-                    <!-- <div class="hover-buttons">
-                        <button class="similar-btn">Similar</button>
-                        <button class="try-btn">Try It</button>
-                    </div> -->
                 </div>
                 <div class="product-details">
                     <div class="product-name">Captivating Grace Drop Earrings</div>
@@ -117,7 +144,8 @@
                         <div class="product-status">Only 1 left!</div>
                     </div>
                 </div>
-                <span class="like-icon"><img src="https://www.tanishq.co.in/on/demandware.static/Sites-Tanishq-Site/-/en_IN/v1727079435264/images/plp/heart-red-border.svg"></span>
+                <span class="like-icon"><img src="https://www.tanishq.co.in/on/demandware.static/Sites-Tanishq-Site/-/en_IN/v1727079435264/images/plp/heart-red-border.svg" alt="Like Icon" class="heart-icon">
+                    <button class="wishlist-btn">Add to Wishlist</button></span>
             </div>
             <div class="category-grid-banner-slot ">
 				<div class="category-grid-banner">
@@ -131,12 +159,19 @@
         <div class="product-list">
             <div class="product">
                 <div class="image-container">
-                    <div class="badge">EXPERT'S CHOICE</div>
+                    <div class="badge"><span class="star"><img src="./assets/ribbon-star.svg"></span> EXPERT'S CHOICE</div>
                     <div class="image-wrapper">
                         <img src="https://www.tanishq.co.in/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dw077eb895/images/hi-res/51D3D2DEMABA00_1.jpg" 
                              alt="Earrings" class="default-image">
                         <img src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dw402efbd6/images/hi-res/51D3D2DEMABA00_2.jpg?sw=640&sh=640"
                              alt="Earrings Hover" class="hover-image">
+                             <div class="hover-buttons">
+                                <button class="similar-btn">
+                                    <span><img src="./assets/similar icon.svg" alt="Similar Icon"></span>Similar</button>
+                                <button class="try-btn">
+                                    <span><img src="./assets/try it icon.svg" alt="Try It Icon"></span> Try It
+                                </button>
+                            </div>
                     </div>
                 </div>
                 <div class="product-details">
@@ -146,17 +181,25 @@
                         <!-- <div class="product-status">Only 1 left!</div> -->
                     </div>
                 </div>
-                <span class="like-icon"><img src="https://www.tanishq.co.in/on/demandware.static/Sites-Tanishq-Site/-/en_IN/v1727079435264/images/plp/heart-red-border.svg"></span>
+                <span class="like-icon"><img src="https://www.tanishq.co.in/on/demandware.static/Sites-Tanishq-Site/-/en_IN/v1727079435264/images/plp/heart-red-border.svg" alt="Like Icon" class="heart-icon">
+                    <button class="wishlist-btn">Add to Wishlist</button></span>
             </div>
         
             <div class="product">
                 <div class="image-container">
-                    <div class="badge">EXPERT'S CHOICE</div>
+                    <div class="badge"><span class="star"><img src="./assets/ribbon-star.svg"></span> EXPERT'S CHOICE</div>
                     <div class="image-wrapper">
                         <img src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dwa7eaccfb/images/hi-res/50D3I2HQTAAA02_1.jpg?sw=640&sh=640" 
                              alt="Earrings" class="default-image">
                         <img src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dw8cfe90e5/images/hi-res/50D3I2HQTAAA02_2.jpg?sw=640&sh=640"
                              alt="Earrings Hover" class="hover-image">
+                             <div class="hover-buttons">
+                                <button class="similar-btn">
+                                    <span><img src="./assets/similar icon.svg" alt="Similar Icon"></span>Similar</button>
+                                <button class="try-btn">
+                                    <span><img src="./assets/try it icon.svg" alt="Try It Icon"></span> Try It
+                                </button>
+                            </div>
                     </div>
                 </div>
                 <div class="product-details">
@@ -166,7 +209,8 @@
                         <div class="product-status">Only 1 left!</div>
                     </div>
                 </div>
-                <span class="like-icon"><img src="https://www.tanishq.co.in/on/demandware.static/Sites-Tanishq-Site/-/en_IN/v1727079435264/images/plp/heart-red-border.svg"></span>
+                <span class="like-icon"><img src="https://www.tanishq.co.in/on/demandware.static/Sites-Tanishq-Site/-/en_IN/v1727079435264/images/plp/heart-red-border.svg" alt="Like Icon" class="heart-icon">
+                    <button class="wishlist-btn">Add to Wishlist</button></span>
             </div>
 
             <div class="product">
@@ -177,6 +221,13 @@
                              alt="Earrings" class="default-image">
                         <img src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dwd3e19672/images/hi-res/506060PKLAAA02_2.jpg?sw=640&sh=640"
                              alt="Earrings Hover" class="hover-image">
+                             <div class="hover-buttons">
+                                <button class="similar-btn">
+                                    <span><img src="./assets/similar icon.svg" alt="Similar Icon"></span>Similar</button>
+                                <button class="try-btn">
+                                    <span><img src="./assets/try it icon.svg" alt="Try It Icon"></span> Try It
+                                </button>
+                            </div>
                     </div>
                 </div>
                 <div class="product-details">
@@ -186,19 +237,27 @@
                         <div class="product-status">Only 1 left!</div>
                     </div>
                 </div>
-                <span class="like-icon"><img src="https://www.tanishq.co.in/on/demandware.static/Sites-Tanishq-Site/-/en_IN/v1727079435264/images/plp/heart-red-border.svg"></span>
+                <span class="like-icon"><img src="https://www.tanishq.co.in/on/demandware.static/Sites-Tanishq-Site/-/en_IN/v1727079435264/images/plp/heart-red-border.svg" alt="Like Icon" class="heart-icon">
+                    <button class="wishlist-btn">Add to Wishlist</button></span>
             </div>
         </div>
 
         <div class="product-list">
             <div class="product">
                 <div class="image-container">
-                    <!-- <div class="badge">EXPERT'S CHOICE</div> -->
+                    <div class="badge"><span class="star"><img src="./assets/ribbon-star.svg"></span> BESTSELLERS</div>
                     <div class="image-wrapper">
                         <img src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dw54e6a0a7/images/hi-res/51D2D2PMMAAA00_1.jpg?sw=640&sh=640" 
                              alt="Earrings" class="default-image">
                         <img src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dw113f6584/images/hi-res/51D2D2PMMAAA00_2.jpg?sw=640&sh=640"
                              alt="Earrings Hover" class="hover-image">
+                             <div class="hover-buttons">
+                                <button class="similar-btn">
+                                    <span><img src="./assets/similar icon.svg" alt="Similar Icon"></span>Similar</button>
+                                <button class="try-btn">
+                                    <span><img src="./assets/try it icon.svg" alt="Try It Icon"></span> Try It
+                                </button>
+                            </div>
                     </div>
                 </div>
                 <div class="product-details">
@@ -208,17 +267,25 @@
                         <!-- <div class="product-status">Only 1 left!</div> -->
                     </div>
                 </div>
-                <span class="like-icon"><img src="https://www.tanishq.co.in/on/demandware.static/Sites-Tanishq-Site/-/en_IN/v1727079435264/images/plp/heart-red-border.svg"></span>
+                <span class="like-icon"><img src="https://www.tanishq.co.in/on/demandware.static/Sites-Tanishq-Site/-/en_IN/v1727079435264/images/plp/heart-red-border.svg" alt="Like Icon" class="heart-icon">
+                    <button class="wishlist-btn">Add to Wishlist</button></span>
             </div>
         
             <div class="product">
                 <div class="image-container">
-                    <!-- <div class="badge">EXPERT'S CHOICE</div> -->
+                    <!-- <div class="badge"><span class="star"><img src="./assets/ribbon-star.svg"></span> EXPERT'S CHOICE</div> -->
                     <div class="image-wrapper">
                         <img src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dw3bb27348/images/hi-res/51D2A1PWPAAA00_1.jpg?sw=640&sh=640" 
                              alt="Earrings" class="default-image">
                         <img src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dw47bcfba5/images/hi-res/51D2A1PWPAAA00_2.jpg?sw=640&sh=640"
                              alt="Earrings Hover" class="hover-image">
+                             <div class="hover-buttons">
+                                <button class="similar-btn">
+                                    <span><img src="./assets/similar icon.svg" alt="Similar Icon"></span>Similar</button>
+                                <button class="try-btn">
+                                    <span><img src="./assets/try it icon.svg" alt="Try It Icon"></span> Try It
+                                </button>
+                            </div>
                     </div>
                 </div>
                 <div class="product-details">
@@ -228,7 +295,8 @@
                         <div class="product-status">OUT OF STOCK</div>
                     </div>
                 </div>
-                <span class="like-icon"><img src="https://www.tanishq.co.in/on/demandware.static/Sites-Tanishq-Site/-/en_IN/v1727079435264/images/plp/heart-red-border.svg"></span>
+                <span class="like-icon"><img src="https://www.tanishq.co.in/on/demandware.static/Sites-Tanishq-Site/-/en_IN/v1727079435264/images/plp/heart-red-border.svg" alt="Like Icon" class="heart-icon">
+                    <button class="wishlist-btn">Add to Wishlist</button></span>
             </div>
 
             <div class="product">
@@ -239,6 +307,13 @@
                              alt="Earrings" class="default-image">
                         <img src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dw27852e71/images/hi-res/50D3I2PQMAAA02_2.jpg?sw=640&sh=640"
                              alt="Earrings Hover" class="hover-image">
+                             <div class="hover-buttons">
+                                <button class="similar-btn">
+                                    <span><img src="./assets/similar icon.svg" alt="Similar Icon"></span>Similar</button>
+                                <button class="try-btn">
+                                    <span><img src="./assets/try it icon.svg" alt="Try It Icon"></span> Try It
+                                </button>
+                            </div>
                     </div>
                 </div>
                 <div class="product-details">
@@ -248,19 +323,27 @@
                         <div class="product-status">Only 1 left!</div>
                     </div>
                 </div>
-                <span class="like-icon"><img src="https://www.tanishq.co.in/on/demandware.static/Sites-Tanishq-Site/-/en_IN/v1727079435264/images/plp/heart-red-border.svg"></span>
+                <span class="like-icon"><img src="https://www.tanishq.co.in/on/demandware.static/Sites-Tanishq-Site/-/en_IN/v1727079435264/images/plp/heart-red-border.svg" alt="Like Icon" class="heart-icon">
+                    <button class="wishlist-btn">Add to Wishlist</button></span>
             </div>
         </div>
 
         <div class="product-list">
             <div class="product">
                 <div class="image-container">
-                    <div class="badge">EXPERT'S CHOICE</div>
+                    <div class="badge"><span class="star"><img src="./assets/ribbon-star.svg"></span> EXPERT'S CHOICE</div>
                     <div class="image-wrapper">
                         <img src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dw3d13d1fa/images/hi-res/51D2D1PETAAA00_1.jpg?sw=640&sh=640" 
                              alt="Earrings" class="default-image">
                         <img src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dw979a577c/images/hi-res/51D2D1PETAAA00_2.jpg?sw=640&sh=640"
                              alt="Earrings Hover" class="hover-image">
+                             <div class="hover-buttons">
+                                <button class="similar-btn">
+                                    <span><img src="./assets/similar icon.svg" alt="Similar Icon"></span>Similar</button>
+                                <button class="try-btn">
+                                    <span><img src="./assets/try it icon.svg" alt="Try It Icon"></span> Try It
+                                </button>
+                            </div>
                     </div>
                 </div>
                 <div class="product-details">
@@ -270,17 +353,25 @@
                         <!-- <div class="product-status">Only 1 left!</div> -->
                     </div>
                 </div>
-                <span class="like-icon"><img src="https://www.tanishq.co.in/on/demandware.static/Sites-Tanishq-Site/-/en_IN/v1727079435264/images/plp/heart-red-border.svg"></span>
+                <span class="like-icon"><img src="https://www.tanishq.co.in/on/demandware.static/Sites-Tanishq-Site/-/en_IN/v1727079435264/images/plp/heart-red-border.svg" alt="Like Icon" class="heart-icon">
+                    <button class="wishlist-btn">Add to Wishlist</button></span>
             </div>
         
             <div class="product">
                 <div class="image-container">
-                    <!-- <div class="badge">EXPERT'S CHOICE</div> -->
+                    <!-- <div class="badge"><span class="star"><img src="./assets/ribbon-star.svg"></span> EXPERT'S CHOICE</div> -->
                     <div class="image-wrapper">
                         <img src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dw08f11281/images/hi-res/513218PPZAAA00_1.jpg?sw=640&sh=640" 
                              alt="Earrings" class="default-image">
                         <img src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dw08f11281/images/hi-res/513218PPZAAA00_1.jpg?sw=640&sh=640"
                              alt="Earrings Hover" class="hover-image">
+                             <div class="hover-buttons">
+                                <button class="similar-btn">
+                                    <span><img src="./assets/similar icon.svg" alt="Similar Icon"></span>Similar</button>
+                                <button class="try-btn">
+                                    <span><img src="./assets/try it icon.svg" alt="Try It Icon"></span> Try It
+                                </button>
+                            </div>
                     </div>
                 </div>
                 <div class="product-details">
@@ -290,7 +381,8 @@
                         <div class="product-status">Only 1 left!</div>
                     </div>
                 </div>
-                <span class="like-icon"><img src="https://www.tanishq.co.in/on/demandware.static/Sites-Tanishq-Site/-/en_IN/v1727079435264/images/plp/heart-red-border.svg"></span>
+                <span class="like-icon"><img src="https://www.tanishq.co.in/on/demandware.static/Sites-Tanishq-Site/-/en_IN/v1727079435264/images/plp/heart-red-border.svg" alt="Like Icon" class="heart-icon">
+                    <button class="wishlist-btn">Add to Wishlist</button></span>
             </div>
 
             <div class="product">
@@ -301,6 +393,13 @@
                              alt="Earrings" class="default-image">
                         <img src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dw398f3157/images/hi-res/50D4I1FNIAA02_2.jpg?sw=640&sh=640"
                              alt="Earrings Hover" class="hover-image">
+                             <div class="hover-buttons">
+                                <button class="similar-btn">
+                                    <span><img src="./assets/similar icon.svg" alt="Similar Icon"></span>Similar</button>
+                                <button class="try-btn">
+                                    <span><img src="./assets/try it icon.svg" alt="Try It Icon"></span> Try It
+                                </button>
+                            </div>
                     </div>
                 </div>
                 <div class="product-details">
@@ -310,22 +409,26 @@
                         <div class="product-status">Only 1 left!</div>
                     </div>
                 </div>
-                <span class="like-icon"><img src="https://www.tanishq.co.in/on/demandware.static/Sites-Tanishq-Site/-/en_IN/v1727079435264/images/plp/heart-red-border.svg"></span>
+                <span class="like-icon"><img src="https://www.tanishq.co.in/on/demandware.static/Sites-Tanishq-Site/-/en_IN/v1727079435264/images/plp/heart-red-border.svg" alt="Like Icon" class="heart-icon">
+                    <button class="wishlist-btn">Add to Wishlist</button></span>
             </div>
         </div>
         <div class="product-list">
             <div class="product">
                 <div class="image-container">
-                    <div class="badge">EXPERT'S CHOICE</div>
+                    <div class="badge"><span class="star"><img src="./assets/ribbon-star.svg"></span> BESTSELLERS</div>
                     <div class="image-wrapper">
                         <img src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dw6db46d15/images/hi-res/510429FBAAA00.jpg?sw=640&sh=640" class="default-image">
                         <img src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dw83e8a32b/images/hi-res/510429FBAAA00_1.jpg?sw=640&sh=640"
                              alt="Earrings Hover" class="hover-image">
+                             <div class="hover-buttons">
+                                <button class="similar-btn">
+                                    <span><img src="./assets/similar icon.svg" alt="Similar Icon"></span>Similar</button>
+                                <button class="try-btn">
+                                    <span><img src="./assets/try it icon.svg" alt="Try It Icon"></span> Try It
+                                </button>
+                            </div>
                     </div>
-                    <!-- <div class="hover-buttons">
-                        <button class="similar-btn">Similar</button>
-                        <button class="try-btn">Try It</button>
-                    </div> -->
                 </div>
                 <div class="product-details">
                     <div class="product-name">Alluring 22 Karat Gold Beaded Finger Ring</div>
@@ -334,7 +437,8 @@
                         <div class="product-status">Only 1 left!</div>
                     </div>
                 </div>
-                <span class="like-icon"><img src="https://www.tanishq.co.in/on/demandware.static/Sites-Tanishq-Site/-/en_IN/v1727079435264/images/plp/heart-red-border.svg"></span>
+                <span class="like-icon"><img src="https://www.tanishq.co.in/on/demandware.static/Sites-Tanishq-Site/-/en_IN/v1727079435264/images/plp/heart-red-border.svg" alt="Like Icon" class="heart-icon">
+                    <button class="wishlist-btn">Add to Wishlist</button></span>
             </div>
             <div class="category-grid-banner-slot ">
 				<div class="category-grid-banner">
@@ -348,12 +452,19 @@
         <div class="product-list">
             <div class="product">
                 <div class="image-container">
-                    <!-- <div class="badge">EXPERT'S CHOICE</div> -->
+                    <!-- <div class="badge"><span class="star"><img src="./assets/ribbon-star.svg"></span> EXPERT'S CHOICE</div> -->
                     <div class="image-wrapper">
                         <img src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dw53c5bc68/images/hi-res/50D3I3FLVAA10_1.jpg?sw=640&sh=640" 
                              alt="Earrings" class="default-image">
                         <img src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dw5aa15e57/images/hi-res/50D3I3FLVAA10_2.jpg?sw=640&sh=640"
                              alt="Earrings Hover" class="hover-image">
+                             <div class="hover-buttons">
+                                <button class="similar-btn">
+                                    <span><img src="./assets/similar icon.svg" alt="Similar Icon"></span>Similar</button>
+                                <button class="try-btn">
+                                    <span><img src="./assets/try it icon.svg" alt="Try It Icon"></span> Try It
+                                </button>
+                            </div>
                     </div>
                 </div>
                 <div class="product-details">
@@ -363,17 +474,25 @@
                         <!-- <div class="product-status">Only 1 left!</div> -->
                     </div>
                 </div>
-                <span class="like-icon"><img src="https://www.tanishq.co.in/on/demandware.static/Sites-Tanishq-Site/-/en_IN/v1727079435264/images/plp/heart-red-border.svg"></span>
+                <span class="like-icon"><img src="https://www.tanishq.co.in/on/demandware.static/Sites-Tanishq-Site/-/en_IN/v1727079435264/images/plp/heart-red-border.svg" alt="Like Icon" class="heart-icon">
+                    <button class="wishlist-btn">Add to Wishlist</button></span>
             </div>
         
             <div class="product">
                 <div class="image-container">
-                    <!-- <div class="badge">EXPERT'S CHOICE</div> -->
+                    <div class="badge"><span class="star"><img src="./assets/ribbon-star.svg"></span> BESTSELLERS</div>
                     <div class="image-wrapper">
                         <img src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dw8107bbd6/images/hi-res/501145FAAAC02_1.jpg?sw=640&sh=640" 
                              alt="Earrings" class="default-image">
                         <img src="https://www.tanishq.co.in/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dwfd996d94/images/hi-res/501145FAAAC02_2.jpg"
                              alt="Earrings Hover" class="hover-image">
+                             <div class="hover-buttons">
+                                <button class="similar-btn">
+                                    <span><img src="./assets/similar icon.svg" alt="Similar Icon"></span>Similar</button>
+                                <button class="try-btn">
+                                    <span><img src="./assets/try it icon.svg" alt="Try It Icon"></span> Try It
+                                </button>
+                            </div>
                     </div>
                 </div>
                 <div class="product-details">
@@ -383,7 +502,8 @@
                         <div class="product-status">only 1 left!</div>
                     </div>
                 </div>
-                <span class="like-icon"><img src="https://www.tanishq.co.in/on/demandware.static/Sites-Tanishq-Site/-/en_IN/v1727079435264/images/plp/heart-red-border.svg"></span>
+                <span class="like-icon"><img src="https://www.tanishq.co.in/on/demandware.static/Sites-Tanishq-Site/-/en_IN/v1727079435264/images/plp/heart-red-border.svg" alt="Like Icon" class="heart-icon">
+                    <button class="wishlist-btn">Add to Wishlist</button></span>
             </div>
 
             <div class="product">
@@ -394,6 +514,13 @@
                              alt="Earrings" class="default-image">
                         <img src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dw6d461437/images/hi-res/501047FDLAB02_2.jpg?sw=640&sh=640"
                              alt="Earrings Hover" class="hover-image">
+                             <div class="hover-buttons">
+                                <button class="similar-btn">
+                                    <span><img src="./assets/similar icon.svg" alt="Similar Icon"></span>Similar</button>
+                                <button class="try-btn">
+                                    <span><img src="./assets/try it icon.svg" alt="Try It Icon"></span> Try It
+                                </button>
+                            </div>
                     </div>
                 </div>
                 <div class="product-details">
@@ -403,19 +530,27 @@
                         <div class="product-status">Only 1 left!</div>
                     </div>
                 </div>
-                <span class="like-icon"><img src="https://www.tanishq.co.in/on/demandware.static/Sites-Tanishq-Site/-/en_IN/v1727079435264/images/plp/heart-red-border.svg"></span>
+                <span class="like-icon"><img src="https://www.tanishq.co.in/on/demandware.static/Sites-Tanishq-Site/-/en_IN/v1727079435264/images/plp/heart-red-border.svg" alt="Like Icon" class="heart-icon">
+                    <button class="wishlist-btn">Add to Wishlist</button></span>
             </div>
         </div>
 
         <div class="product-list">
             <div class="product">
                 <div class="image-container">
-                    <!-- <div class="badge">EXPERT'S CHOICE</div> -->
+                    <!-- <div class="badge"><span class="star"><img src="./assets/ribbon-star.svg"></span> EXPERT'S CHOICE</div> -->
                     <div class="image-wrapper">
                         <img src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dw7727659b/images/hi-res/500596FAAAB02_1.jpg?sw=640&sh=640" 
                              alt="Earrings" class="default-image">
                         <img src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dw8466c34e/images/hi-res/500596FAAAB02_2.jpg?sw=640&sh=640"
                              alt="Earrings Hover" class="hover-image">
+                             <div class="hover-buttons">
+                                <button class="similar-btn">
+                                    <span><img src="./assets/similar icon.svg" alt="Similar Icon"></span>Similar</button>
+                                <button class="try-btn">
+                                    <span><img src="./assets/try it icon.svg" alt="Try It Icon"></span> Try It
+                                </button>
+                            </div>
                     </div>
                 </div>
                 <div class="product-details">
@@ -425,19 +560,25 @@
                         <!-- <div class="product-status">Only 1 left!</div> -->
                     </div>
                 </div>
-                <span class="like-icon"><img src="https://www.tanishq.co.in/on/demandware.static/Sites-Tanishq-Site/-/en_IN/v1727079435264/images/plp/heart-red-border.svg"></span>
+                <span class="like-icon"><img src="https://www.tanishq.co.in/on/demandware.static/Sites-Tanishq-Site/-/en_IN/v1727079435264/images/plp/heart-red-border.svg" alt="Like Icon" class="heart-icon">
+                    <button class="wishlist-btn">Add to Wishlist</button></span>
             </div>
         
             <!-- Search Box in the middle -->
-            <div class="search-box">
-                <img src="/on/demandware.static/-/Sites-Tanishq-site-catalog/default/dw53e416ac/lead-form-img.png" alt="Search Icon" class="search-icon">
-                <h2>Searching for All Jewellery?</h2>
-                <p>Our Specialists are here to help you select the perfect piece!</p>
-                <input type="text" placeholder="Enter your name">
-                <input type="text" placeholder="Your Phone Number">
-                <button class="search-btn">Get in touch</button>
-            </div>
+<div class="search-box">
+    <img src="https://www.tanishq.co.in/on/demandware.static/-/Sites-Tanishq-site-catalog/default/dw53e416ac/lead-form-img.png" alt="Search Icon" class="search-icon">
+    <h1><strong>Searching for All Jewellery?</strong></h1>
+    <p>Our Specialists are here to help you select the perfect piece!</p>
 
+    <!-- Two input fields -->
+    <input type="text" placeholder="Enter your name">
+    <input type="text" placeholder="Your Phone Number">
+
+    <button class="search-btn">
+        Get in touch 
+        <span class="arrow">➤</span>
+    </button>
+</div>
 
             <div class="product">
                 <div class="image-container">
@@ -447,6 +588,13 @@
                              alt="Earrings" class="default-image">
                         <img src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dw728fed88/images/hi-res/511096FCBAA18_2.jpg?sw=640&sh=640"
                              alt="Earrings Hover" class="hover-image">
+                             <div class="hover-buttons">
+                                <button class="similar-btn">
+                                    <span><img src="./assets/similar icon.svg" alt="Similar Icon"></span>Similar</button>
+                                <button class="try-btn">
+                                    <span><img src="./assets/try it icon.svg" alt="Try It Icon"></span> Try It
+                                </button>
+                            </div>
                     </div>
                 </div>
                 <div class="product-details">
@@ -456,19 +604,27 @@
                         <div class="product-status">Only 1 left!</div>
                     </div>
                 </div>
-                <span class="like-icon"><img src="https://www.tanishq.co.in/on/demandware.static/Sites-Tanishq-Site/-/en_IN/v1727079435264/images/plp/heart-red-border.svg"></span>
+                <span class="like-icon"><img src="https://www.tanishq.co.in/on/demandware.static/Sites-Tanishq-Site/-/en_IN/v1727079435264/images/plp/heart-red-border.svg" alt="Like Icon" class="heart-icon">
+                    <button class="wishlist-btn">Add to Wishlist</button></span>
             </div>
         </div>
 
         <div class="product-list">
             <div class="product">
                 <div class="image-container">
-                    <!-- <div class="badge">EXPERT'S CHOICE</div> -->
+                    <div class="badge"><span class="star"><img src="./assets/ribbon-star.svg"></span> BESTSELLERS</div>
                     <div class="image-wrapper">
                         <img src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dw0253a212/images/hi-res/502990OADAAA02_1.jpg?sw=640&sh=640" 
                              alt="Earrings" class="default-image">
                         <img src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dwc3001d92/images/hi-res/502990OADAAA02_2.jpg?sw=640&sh=640"
                              alt="Earrings Hover" class="hover-image">
+                             <div class="hover-buttons">
+                                <button class="similar-btn">
+                                    <span><img src="./assets/similar icon.svg" alt="Similar Icon"></span>Similar</button>
+                                <button class="try-btn">
+                                    <span><img src="./assets/try it icon.svg" alt="Try It Icon"></span> Try It
+                                </button>
+                            </div>
                     </div>
                 </div>
                 <div class="product-details">
@@ -478,17 +634,25 @@
                         <!-- <div class="product-status">Only 1 left!</div> -->
                     </div>
                 </div>
-                <span class="like-icon"><img src="https://www.tanishq.co.in/on/demandware.static/Sites-Tanishq-Site/-/en_IN/v1727079435264/images/plp/heart-red-border.svg"></span>
+                <span class="like-icon"><img src="https://www.tanishq.co.in/on/demandware.static/Sites-Tanishq-Site/-/en_IN/v1727079435264/images/plp/heart-red-border.svg" alt="Like Icon" class="heart-icon">
+                    <button class="wishlist-btn">Add to Wishlist</button></span>
             </div>
         
             <div class="product">
                 <div class="image-container">
-                    <!-- <div class="badge">EXPERT'S CHOICE</div> -->
+                    <div class="badge"><span class="star"><img src="./assets/ribbon-star.svg"></span> EXPERT'S CHOICE</div>
                     <div class="image-wrapper">
                         <img src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dw54186b02/images/hi-res/500063OKAAAA01_1.jpg?sw=640&sh=640" 
                              alt="Earrings" class="default-image">
                         <img src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dw2a766212/images/hi-res/500063OKAAAA01_2.jpg?sw=640&sh=640"
                              alt="Earrings Hover" class="hover-image">
+                             <div class="hover-buttons">
+                                <button class="similar-btn">
+                                    <span><img src="./assets/similar icon.svg" alt="Similar Icon"></span>Similar</button>
+                                <button class="try-btn">
+                                    <span><img src="./assets/try it icon.svg" alt="Try It Icon"></span> Try It
+                                </button>
+                            </div>
                     </div>
                 </div>
                 <div class="product-details">
@@ -498,17 +662,25 @@
                         <div class="product-status">only 1 left!</div>
                     </div>
                 </div>
-                <span class="like-icon"><img src="https://www.tanishq.co.in/on/demandware.static/Sites-Tanishq-Site/-/en_IN/v1727079435264/images/plp/heart-red-border.svg"></span>
+                <span class="like-icon"><img src="https://www.tanishq.co.in/on/demandware.static/Sites-Tanishq-Site/-/en_IN/v1727079435264/images/plp/heart-red-border.svg" alt="Like Icon" class="heart-icon">
+                    <button class="wishlist-btn">Add to Wishlist</button></span>
             </div>
 
             <div class="product">
                 <div class="image-container">
-                    <div class="badge"><img src="" alt=""> EXPERT'S CHOICE</div>
+                    <div class="badge"><span class="star"><img src="./assets/ribbon-star.svg"></span> BESTSELLERS</div>
                     <div class="image-wrapper">
                         <img src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dw4c4648e3/images/hi-res/500063OTAABB09_1.jpg?sw=640&sh=640" 
                              alt="Earrings" class="default-image">
                         <img src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dwf3d7de47/images/hi-res/500063OTAABB09_2.jpg?sw=640&sh=640"
                              alt="Earrings Hover" class="hover-image">
+                             <div class="hover-buttons">
+                                <button class="similar-btn">
+                                    <span><img src="./assets/similar icon.svg" alt="Similar Icon"></span>Similar</button>
+                                <button class="try-btn">
+                                    <span><img src="./assets/try it icon.svg" alt="Try It Icon"></span> Try It
+                                </button>
+                            </div>
                     </div>
                 </div>
                 <div class="product-details">
@@ -518,19 +690,27 @@
                         <div class="product-status">Only 1 left!</div>
                     </div>
                 </div>
-                <span class="like-icon"><img src="https://www.tanishq.co.in/on/demandware.static/Sites-Tanishq-Site/-/en_IN/v1727079435264/images/plp/heart-red-border.svg"></span>
+                <span class="like-icon"><img src="https://www.tanishq.co.in/on/demandware.static/Sites-Tanishq-Site/-/en_IN/v1727079435264/images/plp/heart-red-border.svg" alt="Like Icon" class="heart-icon">
+                    <button class="wishlist-btn">Add to Wishlist</button></span>
             </div>
         </div>
 
         <div class="product-list">
             <div class="product">
                 <div class="image-container">
-                    <!-- <div class="badge">EXPERT'S CHOICE</div> -->
+                    <div class="badge"><span class="star"><img src="./assets/ribbon-star.svg"></span> BESTSELLERS</div>
                     <div class="image-wrapper">
                         <img src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dw85c3d6ef/images/hi-res/500063OBAABA09_1.jpg?sw=640&sh=640" 
                              alt="Earrings" class="default-image">
                         <img src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dw8b4e53b3/images/hi-res/500063OBAABA09_2.jpg?sw=640&sh=640"
                              alt="Earrings Hover" class="hover-image">
+                             <div class="hover-buttons">
+                                <button class="similar-btn">
+                                    <span><img src="./assets/similar icon.svg" alt="Similar Icon"></span>Similar</button>
+                                <button class="try-btn">
+                                    <span><img src="./assets/try it icon.svg" alt="Try It Icon"></span> Try It
+                                </button>
+                            </div>
                     </div>
                 </div>
                 <div class="product-details">
@@ -543,17 +723,25 @@
                         <span class="icon">&#x272a;</span> Flat 6% off
                     </div>
                 </div>
-                <span class="like-icon"><img src="https://www.tanishq.co.in/on/demandware.static/Sites-Tanishq-Site/-/en_IN/v1727079435264/images/plp/heart-red-border.svg"></span>
+                <span class="like-icon"><img src="https://www.tanishq.co.in/on/demandware.static/Sites-Tanishq-Site/-/en_IN/v1727079435264/images/plp/heart-red-border.svg" alt="Like Icon" class="heart-icon">
+                    <button class="wishlist-btn">Add to Wishlist</button></span>
             </div>
         
             <div class="product">
                 <div class="image-container">
-                    <!-- <div class="badge">EXPERT'S CHOICE</div> -->
+                    <div class="badge"><span class="star"><img src="./assets/ribbon-star.svg"></span> BESTSELLERS</div>
                     <div class="image-wrapper">
                         <img src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dw6ca2eeaa/images/hi-res/500063ODAAAB02_1.jpg?sw=640&sh=640" 
                              alt="Earrings" class="default-image">
                         <img src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dw700550da/images/hi-res/500063ODAAAB02_2.jpg?sw=640&sh=640"
                              alt="Earrings Hover" class="hover-image">
+                             <div class="hover-buttons">
+                                <button class="similar-btn">
+                                    <span><img src="./assets/similar icon.svg" alt="Similar Icon"></span>Similar</button>
+                                <button class="try-btn">
+                                    <span><img src="./assets/try it icon.svg" alt="Try It Icon"></span> Try It
+                                </button>
+                            </div>
                     </div>
                 </div>
                 <div class="product-details">
@@ -563,85 +751,53 @@
                         <div class="product-status">only 1 left!</div>
                     </div>
                 </div>
-                <span class="like-icon"><img src="https://www.tanishq.co.in/on/demandware.static/Sites-Tanishq-Site/-/en_IN/v1727079435264/images/plp/heart-red-border.svg"></span>
+                <span class="like-icon"><img src="https://www.tanishq.co.in/on/demandware.static/Sites-Tanishq-Site/-/en_IN/v1727079435264/images/plp/heart-red-border.svg" alt="Like Icon" class="heart-icon">
+                    <button class="wishlist-btn">Add to Wishlist</button></span>
             </div>
 
     </div>
     <div class="load-more-button">
         <button class="load-more-btn">Load More</button>
     </div>
-    <footer>
-        <div class="main">
-            <div class="useful-links">
-                <h3>Useful Links</h3>
-                <br>
-                <ul>
-                    <li><a href="../index.html">Delievery Information</a></li>
-                    <li><a href="#">International Shipping</a></li>
-                    <li><a href="#">Payment Options</a></li>
-                    <li><a href="#">Track your Order</a></li>
-                    <li><a href="#">Returns</a></li>
-                    <li><a href="#">Find a Store</a></li>
-                </ul>
+    
+    <div class="assurance">
+        <img src="https://www.tanishq.co.in/on/demandware.static/-/Library-Sites-TanishqSharedLibrary/default/dw8363e922/assurance/assurance-union.png" alt="The Tanishq Assurance" class="assurance-background">
+        <div class="assurance-text">
+            <h1 class="ass-head">The Tanishq Assurance</h1>
+            <p class="ass-desc">Expert craftsmanship, cherished by you.</p>
+        </div>
+        <div class="assurance-element">
+            <div class="assurance-item">
+                <img src="https://www.tanishq.co.in/on/demandware.static/-/Library-Sites-TanishqSharedLibrary/default/dw3b9ddaa7/assurance/assurance-tq-logo.png" alt="Tanishq Exchange">
+                <p>Tanishq <br> Exchange</p>
             </div>
-            <div class="information">
-                <h3>Information</h3>
-                <br>
-                <ul>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Offers & Contest Details</a></li>
-                    <li><a href="#">Help & FAQs</a></li>
-                    <li><a href="#">About Tanishq</a></li>
-                </ul>
+            <div class="assurance-item">
+                <img src="https://www.tanishq.co.in/on/demandware.static/-/Library-Sites-TanishqSharedLibrary/default/dweee090e8/assurance/assurance-bis-logo.png" alt="Purity Guarantee">
+                <p>Purity <br> Guarantee</p>
             </div>
-            <div class="contact-us">
-                <h3>Contact Us</h3>
-                <br>
-                <ul>
-                    <li><a href="#"><img src="./footer-assets/message-icon.png" alt=""> Write to Us</a></li>
-                    <li><a href="#"><img src="./footer-assets/telephone-icon.png" alt=""> 1800-266-0123</a></li>
-                    <li><a href="#"><img src="./footer-assets/chat-icon.png" alt=""> Chat with Us</a></li>
-                </ul>
+            <div class="assurance-item">
+                <img src="https://www.tanishq.co.in/on/demandware.static/-/Library-Sites-TanishqSharedLibrary/default/dwd5ca947e/assurance/assurance-replacement-logo.png" alt="Easy Replacements">
+                <p>Easy <br> Replacements</p>
             </div>
-            <div class="download">
-                <h4>Download the Tanishq App Now</h4>
-                <div class="image">
-                    <img src="./footer-assets/footer-qr.png" alt="">
-                </div>
-                <div class="download-links">
-                    <a href="https://apps.apple.com/in/app/tanishq-a-tata-product/id1494086207?sessionId=f84f0505-ce4d-4cc3-8d32-63b9f3328f9f.131c44ad-cf2b-4d8c-a57b-094c644ba99e&jarvisId=e882e16d-1797-45a7-a7c4-fb6a7892997f#cm_sp=Homepage-_-footer-_-IOSApp" target="_blank"><img  src="./footer-assets/Download on the App Store.png" alt=""></a>
-                    <a href="https://play.google.com/store/apps/details?id=com.titancompany.tanishqapp&pli=1&sessionId=f84f0505-ce4d-4cc3-8d32-63b9f3328f9f.131c44ad-cf2b-4d8c-a57b-094c644ba99e&jarvisId=e882e16d-1797-45a7-a7c4-fb6a7892997f#cm_sp=Homepage-_-footer-_-AndroidAppLogo" target="_blank"><img src="./footer-assets/get-it-on-google-play.png" alt=""></a>
-                </div>
-                <div class="follow-us">
-                    <h4>Follow Us On</h4>
-                    <a href="https://www.facebook.com/Tanishq/?sessionId=f84f0505-ce4d-4cc3-8d32-63b9f3328f9f.131c44ad-cf2b-4d8c-a57b-094c644ba99e&jarvisId=e882e16d-1797-45a7-a7c4-fb6a7892997f" target="_blank"><img src="./footer-assets/facebook-icon.png" alt=""></a>
-                    <a href="https://x.com/TanishqJewelry?sessionId=f84f0505-ce4d-4cc3-8d32-63b9f3328f9f.131c44ad-cf2b-4d8c-a57b-094c644ba99e&jarvisId=e882e16d-1797-45a7-a7c4-fb6a7892997f" target="_blank"><img src="./footer-assets/twitter-icon.png" alt=""></a>
-                    <a href="https://www.instagram.com/tanishqjewellery/?sessionId=f84f0505-ce4d-4cc3-8d32-63b9f3328f9f.131c44ad-cf2b-4d8c-a57b-094c644ba99e&jarvisId=e882e16d-1797-45a7-a7c4-fb6a7892997f" target="_blank"><img src="./footer-assets/instagram-icon.png" alt=""></a>
-                </div>
+            <div class="assurance-item">
+                <img src="https://www.tanishq.co.in/on/demandware.static/-/Library-Sites-TanishqSharedLibrary/default/dw0d956907/assurance/assurance-maintainence-logo.png" alt="Lifetime Maintenance">
+                <p>Lifetime <br> Maintenance</p>
             </div>
         </div>
-        <div class="divider"></div>
-        <div class="lower-footer">
-            <div class="investors"><img src="./footer-assets/visa-icon.png" alt=""></div>
-            <div class="investors"><img src="./footer-assets/mastercard-icon.png"></div>
-            <div class="investors"><img src="./footer-assets/paypal-icon.png" alt=""></div>
-            <div class="investors"><img src="./footer-assets/maestro-card.png" alt=""></div>
-            <div class="investors"><img src="./footer-assets/rupay-icon.png" alt=""></div>
-            <div class="investors"><img src="./footer-assets/icici-icon.png" alt=""></div>
-            <div class="investors"><img src="./footer-assets/american-express-icon.png" alt=""></div>
-            <div class="investors"><img src="./footer-assets/diner-club-icon.png" alt=""></div>
-            <div class="tnc">
-                <div class="copyright">
-                    <h4>&#169; 2024 Titan Company Limited. All Rights Reserved.</h4>
-                </div>
-                <div class="terms">
-                    <a href="https://www.tanishq.co.in/terms-and-conditions.html?lang=en_IN">Terms & Conditions</a>
-                    <a class="pp" href="https://www.tanishq.co.in/privacy-policy.html?lang=en_IN">Privacy Policy</a>
-                    <a href="https://www.tanishq.co.in/disclaimer.html?lang=en_IN">Disclaimer</a>
-                </div>
-            </div>
-        </div>
-    </footer>
+    </div>
+    
+    
+    <div id="recently-viewed-container">
+		<!-- Create the button -->
+		<button id="recently-viewed-button">Recently Viewed <span class="eye"><img src="https://www.tanishq.co.in/on/demandware.static/Sites-Tanishq-Site/-/default/dwa2aedeb6/images/eye-fill.svg"></span></button>
+	  </div>
+	  <div class="live-on">
+	  <div class="live-box">
+		<div class="live-box-in">
+			<p>Live Chat</p>
+		</div>
+	  </div>
+	</div>
+
 </body>
 </html>
